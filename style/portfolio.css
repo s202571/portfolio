@@ -1,0 +1,12 @@
+h1 {
+    font-weight: 800; font-size: 5rem;
+    background: linear-gradient(to right, aqua, lime, pink, aqua);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: text_bg 5s linear infinite;
+}
+@keyframes text_bg {
+    0% {background-position-x:100% ;}
+    100% {background-position-x: 400%;}
+}
