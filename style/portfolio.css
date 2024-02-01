@@ -1,4 +1,5 @@
-h1 {
+/* 글자 바꾸는 방법
+    h1 {
     font-weight: 800; font-size: 5rem;
     background: linear-gradient(to right, aqua, lime, pink, aqua);
     -webkit-background-clip: text;
@@ -9,4 +10,80 @@ h1 {
 @keyframes text_bg {
     0% {background-position-x:100% ;}
     100% {background-position-x: 400%;}
+} */
+* {background-color: #F5EEE6;}
+header {position: fixed; top: 0; left: 0; width: 100%; background-color: transparent;}
+header .top {
+    background-color: #DC8686;
+    height:50px ;
 }
+header nav {margin: 40px 46px 0; float: right; background-color: transparent;}
+header nav button {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
+    color: #DC8686;
+}
+main {}
+/* intro */
+main .intro {}
+main .intro .container {margin: 200px 90px 0;}
+main .intro .container h1 {
+    color: #776B5D; font-size: 4rem;
+}
+main .intro .container .intro_content {
+    margin-top: 65px; display: flex; flex-flow: row nowrap;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 75px;
+}
+main .intro .container .intro_content img {
+    width: 240px; height: auto; border-radius: 50%; margin-right: 120px;
+}
+main .intro .container .intro_content .text {background-color: transparent;
+}
+main .intro .container .intro_content .text h2 {
+    background-color: transparent;
+    font-size: 1.8rem; font-weight: 500;
+}
+main .intro .container .intro_content .text p {background-color: transparent;
+    font-size: 1.8rem; font-weight: 500; margin-top: 60px;
+}
+main .intro .container .intro_content .text p span {background-color: transparent;
+    font-size: 1.8rem; font-weight: 500;
+    position: relative; top: 50px; right: 50px;
+}
+main .intro .bg {margin-top: 100px; height: 300px; background-color: #776B5D;}
+main .intro .bg button {
+    position: relative; left: 50%; top: 50%;
+    padding: 25px 110px; background-color: #F5EEE6;
+    border-radius: 10px; box-shadow:0 4px 4px 0 #000 ;
+    transform: translate(-50%, -50%); font-size: 1.8rem; font-weight: 700;
+    color: #776B5D;
+}
+main .wrap {margin-top: 176px;}
+/* abiut */
+main .wrap .abiut {margin: 200px 90px 0;}
+main .wrap .abiut h2 {
+    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
+}
+main .wrap .abiut .abiut_container {margin-top: 100px;
+    display: flex; flex-flow: row wrap;
+}
+main .wrap .abiut .abiut_container .box {
+    background-color: #B0A695; border-radius: 25PX;
+    text-align: center; width: 300px; height: 250px;
+}
+main .wrap .abiut .abiut_container .box .abiut_title {background-color: transparent;}
+main .wrap .abiut .abiut_container .box .abiut_content {background-color: transparent;}
+main .wrap .abiut span {}
+/* skill */
+main .wrap .skill {}
+main .wrap .skill h2 {}
+main .wrap .skill .skill_containrt {}
+main .wrap .skill .skill_containrt .skill_photo {}
+main .wrap .skill .skill_explanation {}
+main .wrap .skill .skill_explanation .last_skill_photo {}
+/* .project */
+main .wrap .project {}
+main .wrap .project h2 {}
+main .wrap .project .box {}
+main .wrap .project .box .project_photo {}
+main .wrap .project .box .project_photo img {}
+main .wrap .project .container {}
