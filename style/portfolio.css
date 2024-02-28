@@ -15,9 +15,11 @@
 header {position: fixed; top: 0; left: 0; width: 100%; background-color: transparent;}
 header .top {
     background-color: #DC8686;
-    height:50px ;
+    height:50px ; z-index: 999;
 }
-header nav {margin: 40px 46px 0; float: right; background-color: transparent;}
+header nav {
+    margin: 40px 46px 0; float: right; background-color: transparent;
+}
 header nav button {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
     color: #DC8686;
 }
@@ -38,10 +40,7 @@ main .intro .container .intro_content img {
 }
 main .intro .container .intro_content .text {background-color: transparent;
 }
-main .intro .container .intro_content .text h2 {
-    background-color: transparent;
-    font-size: 1.8rem; font-weight: 500;
-}
+
 main .intro .container .intro_content .text p {background-color: transparent;
     font-size: 1.8rem; font-weight: 500; margin-top: 60px;
 }
@@ -49,7 +48,21 @@ main .intro .container .intro_content .text p span {background-color: transparen
     font-size: 1.8rem; font-weight: 500;
     position: relative; top: 50px; right: 50px;
 }
-main .intro .bg {margin-top: 100px; height: 300px; background-color: #776B5D;}
+main .intro .container .intro_content .text .popup {
+    display: none !important;
+    position:fixed; left:0; top:0; z-index:999;
+    width:100%; height:100vh;
+    display:flex; flex-flow:column;
+    justify-content: center; align-items: center;
+}
+main .intro .container .intro_content .text .popup .popup_content {
+    font-size: 1.8rem; font-weight: 500; background:rgba(0,0,0,0.48);
+    color: #fff; border-radius: 10px; padding: 5px 10px;
+}
+main .intro .bg {
+    margin-top: 100px; height: 300px; background-color: #776B5D;
+    z-index: 10;
+}
 main .intro .bg button {
     position: relative; left: 50%; top: 50%;
     padding: 25px 110px; background-color: #F5EEE6;
@@ -63,20 +76,54 @@ main .wrap .abiut {margin: 200px 90px 0;}
 main .wrap .abiut h2 {
     color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
 }
-main .wrap .abiut .abiut_container {margin-top: 100px;
-    display: flex; flex-flow: row wrap;
+main .wrap .abiut .abiut_container {
+    margin: 100px auto 116px;
+    display: grid; grid-template-columns: repeat(3, 300px); 
+    justify-content: center; align-items: center;
+    column-gap: 160px;
+    row-gap: 70px;
 }
 main .wrap .abiut .abiut_container .box {
     background-color: #B0A695; border-radius: 25PX;
     text-align: center; width: 300px; height: 250px;
 }
-main .wrap .abiut .abiut_container .box .abiut_title {background-color: transparent;}
-main .wrap .abiut .abiut_container .box .abiut_content {background-color: transparent;}
-main .wrap .abiut span {}
+main .wrap .abiut .abiut_container .box:hover {
+    background-color: #DC8686;
+}
+main .wrap .abiut .abiut_container .box:hover > .abiut_title {
+    color: #F5EEE6;
+}
+main .wrap .abiut .abiut_container .box:hover > .abiut_content {
+    color: #F5EEE6;
+}
+main .wrap .abiut .abiut_container .box .abiut_title {
+    background-color: transparent;
+    margin-top: 68px; color: #000;
+    font-size: 1.5rem; font-weight: 600;
+}
+main .wrap .abiut .abiut_container .box .abiut_content {
+    background-color: transparent;
+    margin-top: 20px; color: #000; 
+    font-size: 1.125rem;
+}
+main .wrap .abiut span {
+    content: ''; display: block;
+    width: 557px; height: 3px; position: relative; top: 0; left: 50%;
+    transform: translateX(-50%);
+    background-color: #776B5D;
+    margin-bottom: 200px;
+}
 /* skill */
-main .wrap .skill {}
-main .wrap .skill h2 {}
-main .wrap .skill .skill_containrt {}
+main .wrap .skill {
+    background-color: #B06161;
+}
+main .wrap .skill h2 {
+    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
+    margin: 95px auto 100px; background-color: transparent;
+}
+main .wrap .skill .skill_containrt {
+    background-color: #fff; margin: 0 144px;
+}
 main .wrap .skill .skill_containrt .skill_photo {}
 main .wrap .skill .skill_explanation {}
 main .wrap .skill .skill_explanation .last_skill_photo {}

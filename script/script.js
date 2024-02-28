@@ -37,7 +37,7 @@ function createbox(abiut) {
     // content
     let content = document.createElement('p');
     content.innerHTML = abiut.text;
-    content.classList.add('abiut_title')
+    content.classList.add('abiut_content')
     abiut_box.appendChild(content);
 
     return abiut_box; // 요소 반환
