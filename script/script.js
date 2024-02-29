@@ -123,3 +123,41 @@ skill_list.forEach((skill) => {
     const skill_box = createbox(skill);
     skill_text.appendChild(skill_box);
 })
+
+// 스크롤
+
+
+// 슬라이드
+let swiperContainer = document.querySelector('.swiper-container')
+let swiper = new Swiper('.swiper-container', {
+    // 한 번에 보여줄 슬라이드 수
+    slidesPerView: 1,
+    // 슬라이드 사이의 간격
+    spaceBetween: 15,
+    // 한 번에 넘길 슬라이드 수
+    slidesPerGroup: 1, 
+    loop: true,
+    autoplay:{delay:5000,},
+    centeredSlides : true,
+    pagination: {
+        el: '.swiper-pagination',
+        type:'bullets',
+        clickable:true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    
+})
+// 재생 정지 버튼으로 swiper 제어하기
+const pause_btn = document.querySelector('#pause')
+const start_btn = document.querySelector('#start')
+pause_btn.addEventListener('click', ()=>{
+    // 정지하고 싶은 swiper을 가진 변수명 연결
+    mySwiper.autoplay.stop()
+})
+start_btn.addEventListener('click',()=>{
+    mySwiper.autoplay.start()
+})
+

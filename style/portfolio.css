@@ -81,8 +81,8 @@ main .wrap .skill .skill_container {
     padding: 30px 65px; border-radius: 40px;
 }
 main .wrap .skill .skill_container .skill_photo {
-    display: grid; grid-template-columns: repeat(7, auto);
-    gap: 50px; 
+    display: flex; flex-flow: row wrap; 
+    gap: 20px;
 }
 main .wrap .skill .skill_container .skill_photo button {}
 main .wrap .skill .skill_container .skill_photo button img {
@@ -123,10 +123,51 @@ main .wrap .skill .skill_explanation .skill_text .box:first-of-type .skill_conte
 main .wrap .project {
     margin: 200px 90px 0;
 }
-main .wrap .project h2 {
-    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
+main .wrap .project > h2 {
+    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center; margin-bottom: 150px;
 }
-main .wrap .project .box {}
-main .wrap .project .box .project_photo {}
-main .wrap .project .box .project_photo img {}
-main .wrap .project .container {}
+main .wrap .project .swiper-container {position: relative;}
+main .wrap .project .swiper-container .swiper-wrapper {
+    display: flex;
+    /* width: 100%; overflow-x: hidden; */
+    width: 100%;
+    white-space: nowrap; justify-content: space-between;
+    padding-bottom: 250px; margin-left: 200px;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide {
+    width: 100%; display: inline-block; margin-right: 300px;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide h2 {
+    font-size: 2rem; font-weight: 700; color: #776B5D;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container {
+    margin-top: 20px; display: flex; 
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo {position: relative; overflow: hidden;}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo img {
+    height: 400px; width: auto; margin-right: 130px;
+    z-index: 100; position: relative;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link button {
+    text-align: left; width: 100px;
+    position: absolute; left: 340px;  padding: 5px 15px;
+    background-color: #DC8686; border-radius: 5px;
+    z-index: 1;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link .result {top: 300px;}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link .plan {top: 340px;}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content {
+
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content dl {
+    margin-top: 20px;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content dl dt {
+    font-size: 2rem;
+    white-space: nowrap;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content dl dd {
+    font-size: 1.25rem;
+}
+main .wrap .project .swiper-container button {
+}

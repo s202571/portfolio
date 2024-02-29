@@ -1,3 +1,6 @@
+body{margin: 0; display: flex; justify-content: center; align-items: center;
+height: 100vh; background-color: #F5EEE6;}
+main {background-color: #F5EEE6; width: 100vw; height: 100vh;}
 main .intro {}
 main .intro .container {margin: 95px 90px 0;}
 main .intro .container h1 {
@@ -29,12 +32,12 @@ main .intro .container .intro_content .text .popup {
     justify-content: center; align-items: center;
 }
 main .intro .container .intro_content .text .popup .popup_content {
-    font-size: 1.8rem; font-weight: 500; background:rgba(0,0,0,0.48);
+    font-size: 1.8rem; font-weight: 500; background:rgba(235, 160, 160, 0.473);
     color: #fff; border-radius: 10px; padding: 5px 10px;
 }
 main .intro .bg {
-    margin-top: 62px; height: 264px; background-color: #776B5D;
-    z-index: 10; line-height: 264px;
+    margin-top: 62px; height: 230px; background-color: #776B5D;
+    z-index: 10; line-height: 230px;
     display:flex; justify-content: center; align-items: center;
 }
 main .intro .bg .see_details {

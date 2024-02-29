@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Pen+Script&family=Single+Day&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Single+Day&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -26,7 +28,6 @@
         </nav>
     </header>
     <main>
-        <div class="top"></div>
         <div class="wrap">
             <div class="about">
                 <!-- js -->
@@ -88,7 +89,7 @@
             </section>
             <section class="project">
                 <h2>Project</h2>
-                <div class="swiper-container">
+                <div class="swiper-container slide_wrap">
                     <!--필수-->
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide1">
@@ -97,19 +98,41 @@
                                 <div class="photo">
                                     <img src="./images/photo/yeogi.png" alt="">
                                     <div class="project_link">
-                                        <div class="result">
-                                            <button type="button">결과 보기</button>
-                                        </div>
-                                        <div class="plan">
-                                            <button type="button">기획서 보기</button>
-                                        </div>
+                                        <button type="button" class="result">결과</button>
+                                        <button type="button" class="plan">기획서</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <dl>
+                                        <dt>참여도</dt>
+                                        <dd>팀프로젝트(4인)</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>제작기간</dt>
+                                        <dd>28일</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>제작페이지</dt>
+                                        <dd>마이페이지 / 고객센터(챗gpt추가) / 이벤트 전체,상세페이지</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <h2>오설록</h2>
+                            <div class="container">
+                                <div class="photo">
+                                    <img src="./images/photo/yeogi.png" alt="">
+                                    <div class="project_link">
+                                        <button type="button" class="result">결과</button>
+                                        <button type="button" class="plan">기획서</button>
                                     </div>
                                 </div>
                                 <div class="content">
                                     <div class="text">
                                         <dl>
                                             <dt>참여도</dt>
-                                            <dd>팀프로젝트(4인)</dd>
+                                            <dd>개인 100%</dd>
                                         </dl>
                                         <dl>
                                             <dt>제작기간</dt>
@@ -117,21 +140,50 @@
                                         </dl>
                                         <dl>
                                             <dt>제작페이지</dt>
-                                            <dd>마이페이지 / 고객센터(챗gpt추가) / 이벤트 전체,상세페이지</dd>
+                                            <dd>all</dd>
                                         </dl>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide slide2">slide2</div>
-                        <div class="swiper-slide slide3">slide3</div>
+                        <div class="swiper-slide slide3">
+                            <h2>여기어때</h2>
+                            <div class="container">
+                                <div class="photo">
+                                    <img src="./images/photo/yeogi.png" alt="">
+                                    <div class="project_link">
+                                        <button type="button" class="result">결과</button>
+                                        <button type="button" class="plan">기획서</button>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <div class="text">
+                                        <dl>
+                                            <dt>참여도</dt>
+                                            <dd>개인 100%</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제작기간</dt>
+                                            <dd>4일</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>제작페이지</dt>
+                                            <dd>all</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-scrollbar"></div>
-            </div>
-                
+                    <div class="btn">
+                        <button type="button" id="pause">일시정지</button><!-- a가능 -->
+                        <button type="button" id="start">다시시작</button><!-- a가능 -->
+                    </div>
+                </div>
             </section>
         </div>
     </main>
