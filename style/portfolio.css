@@ -11,14 +11,14 @@
     0% {background-position-x:100% ;}
     100% {background-position-x: 400%;}
 } */
-* {background-color: #F5EEE6;}
-header {position: fixed; top: 0; left: 0; width: 100%; background-color: transparent;}
+main {background-color: #F5EEE6;}
+header {position: fixed; top: 0; left: 0; width: 100%; }
 header .top {
     background-color: #DC8686;
     height:50px ; z-index: 999;
 }
 header nav {
-    margin: 40px 46px 0; float: right; background-color: transparent;
+    margin: 40px 46px 0; float: right; 
 }
 header nav button {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
     color: #DC8686;
@@ -26,43 +26,41 @@ header nav button {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
 main {}
 /* intro */
 
-main .wrap {margin-top: 176px;}
-/* abiut */
-main .wrap .abiut {margin: 200px 90px 0;}
-main .wrap .abiut h2 {
+main .wrap {padding-top: 176px;}
+/* about */
+main .wrap .about {margin: 200px 90px 0;}
+main .wrap .about h2 {
     color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
 }
-main .wrap .abiut .abiut_container {
+main .wrap .about .about_container {
     margin: 100px auto 116px;
     display: grid; grid-template-columns: repeat(3, 300px); 
     justify-content: center; align-items: center;
-    column-gap: 160px;
+    column-gap: 100px;
     row-gap: 70px;
 }
-main .wrap .abiut .abiut_container .box {
+main .wrap .about .about_container .box {
     background-color: #B0A695; border-radius: 25PX;
     text-align: center; width: 300px; height: 250px;
 }
-main .wrap .abiut .abiut_container .box:hover {
+main .wrap .about .about_container .box:hover {
     background-color: #DC8686;
 }
-main .wrap .abiut .abiut_container .box:hover > .abiut_title {
+main .wrap .about .about_container .box:hover > .about_title {
     color: #F5EEE6;
 }
-main .wrap .abiut .abiut_container .box:hover > .abiut_content {
+main .wrap .about .about_container .box:hover > .about_content {
     color: #F5EEE6;
 }
-main .wrap .abiut .abiut_container .box .abiut_title {
-    background-color: transparent;
+main .wrap .about .about_container .box .about_title {
     margin-top: 68px; color: #000;
     font-size: 1.5rem; font-weight: 600;
 }
-main .wrap .abiut .abiut_container .box .abiut_content {
-    background-color: transparent;
+main .wrap .about .about_container .box .about_content {
     margin-top: 20px; color: #000; 
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
-main .wrap .abiut span {
+main .wrap .about span {
     content: ''; display: block;
     width: 557px; height: 3px; position: relative; top: 0; left: 50%;
     transform: translateX(-50%);
@@ -72,20 +70,62 @@ main .wrap .abiut span {
 /* skill */
 main .wrap .skill {
     background-color: #B06161;
+    padding: 95px 0;
 }
 main .wrap .skill h2 {
-    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
-    margin: 95px auto 100px; background-color: transparent;
+    color: #E7C6C6; font-weight: 600; font-size: 4rem; text-align: center;
+    margin: 0 auto 100px; 
 }
-main .wrap .skill .skill_containrt {
+main .wrap .skill .skill_container {
     background-color: #fff; margin: 0 144px;
+    padding: 30px 65px; border-radius: 40px;
 }
-main .wrap .skill .skill_containrt .skill_photo {}
-main .wrap .skill .skill_explanation {}
-main .wrap .skill .skill_explanation .last_skill_photo {}
+main .wrap .skill .skill_container .skill_photo {
+    display: grid; grid-template-columns: repeat(7, auto);
+    gap: 50px; 
+}
+main .wrap .skill .skill_container .skill_photo button {}
+main .wrap .skill .skill_container .skill_photo button img {
+    width: 100px; height: auto; 
+}
+main .wrap .skill .skill_explanation {
+    background-color: #fff; margin: 80px 144px;
+    padding: 70px 65px; border-radius: 40px;
+    display: flex;
+}
+main .wrap .skill .skill_explanation .last_skill_photo {
+    margin-right: 58px;
+}
+main .wrap .skill .skill_explanation .last_skill_photo img {
+    width: auto; height: 300px; 
+    display: none; 
+}
+main .wrap .skill .skill_explanation .last_skill_photo img:first-of-type {
+    display: block;
+}
+main .wrap .skill .skill_explanation .skill_text {
+}
+main .wrap .skill .skill_explanation .skill_text .box {padding: 0 100px;}
+main .wrap .skill .skill_explanation .skill_text .box .skill_title {
+    display: none; font-size: 4rem; font-weight: 700;
+}
+main .wrap .skill .skill_explanation .skill_text .box:first-of-type .skill_title {
+    display: block;
+}
+main .wrap .skill .skill_explanation .skill_text .box .skill_content {
+    display: none; margin-top: 75px; font-size: 1.25rem; font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+}
+main .wrap .skill .skill_explanation .skill_text .box:first-of-type .skill_content {
+    display: block;
+}
 /* .project */
-main .wrap .project {}
-main .wrap .project h2 {}
+main .wrap .project {
+    margin: 200px 90px 0;
+}
+main .wrap .project h2 {
+    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
+}
 main .wrap .project .box {}
 main .wrap .project .box .project_photo {}
 main .wrap .project .box .project_photo img {}

@@ -1,5 +1,3 @@
-
-
 html,body,* {box-sizing:border-box;}
 html,body,h1,h2,h3,h4,h5,h6,
 p,em,strong,a,span, sup,sub,del,q,blockquote,code,
@@ -16,7 +14,7 @@ address,details,mark,time,video,img,summary,iframe,div{
     line-height:1.2; color:#333;
     text-decoration:none;
     letter-spacing:-0.4px;
-    font-family:'Noto Sans KR','Gowun Dodum', sans-serif;
+    font-family: "Gaegu", sans-serif;
     box-sizing: border-box;
 }
 ul,ol,li {list-style:none;}
