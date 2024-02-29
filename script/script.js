@@ -141,23 +141,25 @@ let swiper = new Swiper('.swiper-container', {
     centeredSlides : true,
     pagination: {
         el: '.swiper-pagination',
-        type:'bullets',
-        clickable:true,
+        type:'fraction'
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    
+    //마우스 휠 가능
+    mousewheel:{
+        invert:true,  
+    },
 })
 // 재생 정지 버튼으로 swiper 제어하기
 const pause_btn = document.querySelector('#pause')
 const start_btn = document.querySelector('#start')
 pause_btn.addEventListener('click', ()=>{
     // 정지하고 싶은 swiper을 가진 변수명 연결
-    mySwiper.autoplay.stop()
+    swiper.autoplay.stop()
 })
 start_btn.addEventListener('click',()=>{
-    mySwiper.autoplay.start()
+    swiper.autoplay.start()
 })
 

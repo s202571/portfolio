@@ -1,3 +1,4 @@
+html ,body {overflow-x:hidden; width:100%;}
 /* 글자 바꾸는 방법
     h1 {
     font-weight: 800; font-size: 5rem;
@@ -152,10 +153,18 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .
     text-align: left; width: 100px;
     position: absolute; left: 340px;  padding: 5px 15px;
     background-color: #DC8686; border-radius: 5px;
-    z-index: 1;
+    z-index: 1; color: #fff;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link .result {top: 300px;}
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link .plan {top: 340px;}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link .result:hover {
+    background-color: #E7C6C6; transform: translateX(70px);
+    width: 100px; transition: all 0.3s
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link .plan:hover {
+    background-color: #E7C6C6; transform: translateX(70px);
+    width: 70px; transition: all 0.3s;
+}
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content {
 
 }
@@ -169,5 +178,19 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content dl dd {
     font-size: 1.25rem;
 }
-main .wrap .project .swiper-container button {
+main .wrap .project .swiper-container .btn {
+    position: absolute; left: 50%; bottom: 131px;
+    transform: translateX(-50%);
+}
+main .wrap .project .swiper-container .btn button {
+    margin-right: 10px; font-weight: 500; font-size: 1.125rem;
+}
+main .wrap .project .swiper-container .swiper-button-prev{
+    color: #776B5D;
+}
+main .wrap .project .swiper-container .swiper-button-next {
+    color: #776B5D;
+}
+main .wrap .project .swiper-container .swiper-pagination {
+    bottom: 60px; font-weight: 700; 
 }
