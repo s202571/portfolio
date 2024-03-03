@@ -13,7 +13,7 @@ html ,body {overflow-x:hidden; width:100%;}
     100% {background-position-x: 400%;}
 } */
 main {background-color: #F5EEE6;}
-header {position: fixed; top: 0; left: 0; width: 100%; }
+header {position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;}
 header .top {
     background-color: #DC8686;
     height:50px ; z-index: 999;
@@ -21,47 +21,69 @@ header .top {
 header nav {
     margin: 40px 46px 0; float: right; 
 }
-header nav button {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
+header nav a {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
     color: #DC8686;
+}
+header nav a.active {
+    color: #B06161;
 }
 main {}
 /* intro */
 
 main .wrap {padding-top: 176px;}
 /* about */
-main .wrap .about {margin: 200px 90px 0;}
+main .wrap .about {margin: 100px 90px 0;}
 main .wrap .about h2 {
     color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
 }
 main .wrap .about .about_container {
     margin: 100px auto 116px;
-    display: grid; grid-template-columns: repeat(3, 300px); 
-    justify-content: center; align-items: center;
-    column-gap: 100px;
-    row-gap: 70px;
 }
-main .wrap .about .about_container .box {
-    background-color: #B0A695; border-radius: 25PX;
-    text-align: center; width: 300px; height: 250px;
+main .wrap .about .about_container .bg {
+    background-color:#B0A695; display: flex; flex-flow: row nowrap;
+    border-radius: 10px; align-items: center;
+    padding: 30px 60px;
 }
-main .wrap .about .about_container .box:hover {
-    background-color: #DC8686;
+main .wrap .about .about_container .bg .photo {
+    overflow: hidden; margin-right: 70px;
 }
-main .wrap .about .about_container .box:hover > .about_title {
-    color: #F5EEE6;
+main .wrap .about .about_container .bg .photo img {
+    border-radius: 50%; width: 300px; height: auto; 
+    object-position:left 20%; 
+    filter:contrast(85%) brightness(120%) saturate(110%) sepia(10%);
 }
-main .wrap .about .about_container .box:hover > .about_content {
-    color: #F5EEE6;
+main .wrap .about .about_container .bg .about_content {
+    display: flex; flex-flow: column nowrap; justify-content: flex-start;
 }
-main .wrap .about .about_container .box .about_title {
-    margin-top: 68px; color: #000;
+main .wrap .about .about_container .bg .about_content > p {font-size: 1.5rem; font-weight: 600;}
+main .wrap .about .about_container .bg .about_content .box {
+    margin-top: 50px; display: flex; flex-flow: row nowrap;
+}
+main .wrap .about .about_container .bg .about_content .box .left {
+    margin-right: 200px;
+}
+main .wrap .about .about_container .bg .about_content .box .left p {
+    font-size: 1.25rem; margin-top: 20px; font-weight: 500;
+}
+main .wrap .about .about_container .bg .about_content .box .left p span {
     font-size: 1.5rem; font-weight: 600;
+    margin-right: 10px;
 }
-main .wrap .about .about_container .box .about_content {
-    margin-top: 20px; color: #000; 
-    font-size: 1.25rem;
+main .wrap .about .about_container .bg .about_content .box .right {}
+main .wrap .about .about_container .bg .about_content .box .right p {
+    font-size: 1.25rem; margin-top: 20px;font-weight: 500;
 }
-main .wrap .about span {
+main .wrap .about .about_container .bg .about_content .box .right p span {
+    font-size: 1.5rem; font-weight: 600; margin-right: 10px;
+}
+main .wrap .about .about_container .bg .about_content .box .right p a {
+    text-decoration: underline; font-size: 1.25rem;
+    color: #776B5D; font-weight: 500;
+}
+main .wrap .about .about_container .bg .about_content .box .right p a:hover {
+    color: #E7C6C6;
+}
+main .wrap .about > span {
     content: ''; display: block;
     width: 557px; height: 3px; position: relative; top: 0; left: 50%;
     transform: translateX(-50%);
@@ -87,18 +109,18 @@ main .wrap .skill .skill_container .skill_photo {
 }
 main .wrap .skill .skill_container .skill_photo button {}
 main .wrap .skill .skill_container .skill_photo button img {
-    width: 100px; height: auto; 
+    width: 75px; height: auto; 
 }
 main .wrap .skill .skill_explanation {
-    background-color: #fff; margin: 80px 144px;
-    padding: 70px 65px; border-radius: 40px;
+    background-color: #fff; margin: 70px 144px;
+    padding: 30px 65px; border-radius: 40px;
     display: flex;
 }
 main .wrap .skill .skill_explanation .last_skill_photo {
     margin-right: 58px;
 }
 main .wrap .skill .skill_explanation .last_skill_photo img {
-    width: auto; height: 300px; 
+    width: auto; height: 150px; 
     display: none; 
 }
 main .wrap .skill .skill_explanation .last_skill_photo img:first-of-type {
@@ -108,13 +130,13 @@ main .wrap .skill .skill_explanation .skill_text {
 }
 main .wrap .skill .skill_explanation .skill_text .box {padding: 0 100px;}
 main .wrap .skill .skill_explanation .skill_text .box .skill_title {
-    display: none; font-size: 4rem; font-weight: 700;
+    display: none; font-size: 3rem; font-weight: 700;
 }
 main .wrap .skill .skill_explanation .skill_text .box:first-of-type .skill_title {
     display: block;
 }
 main .wrap .skill .skill_explanation .skill_text .box .skill_content {
-    display: none; margin-top: 75px; font-size: 1.25rem; font-family: "Noto Sans KR", sans-serif;
+    display: none; margin-top: 20px; font-size: 1.25rem; font-family: "Noto Sans KR", sans-serif;
     font-weight: 500;
 }
 main .wrap .skill .skill_explanation .skill_text .box:first-of-type .skill_content {
@@ -122,10 +144,10 @@ main .wrap .skill .skill_explanation .skill_text .box:first-of-type .skill_conte
 }
 /* .project */
 main .wrap .project {
-    margin: 200px 90px 0;
+    margin: 100px 90px 0;
 }
-main .wrap .project > h2 {
-    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center; margin-bottom: 150px;
+main .wrap .project h1 {
+    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center; margin-bottom: 50px;
 }
 main .wrap .project .swiper-container {position: relative;}
 main .wrap .project .swiper-container .swiper-wrapper {
@@ -179,11 +201,24 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .
     font-size: 1.25rem;
 }
 main .wrap .project .swiper-container .btn {
-    position: absolute; left: 50%; bottom: 131px;
+    position: absolute; left: 50%; bottom: 150px;
     transform: translateX(-50%);
 }
+main .wrap .project .swiper-container .btn #pause {
+    margin-right: 30px; 
+}
 main .wrap .project .swiper-container .btn button {
-    margin-right: 10px; font-weight: 500; font-size: 1.125rem;
+    z-index: 999;
+}
+main .wrap .project .swiper-container .btn button:hover {
+    color: #B06161; background-color: #776B5D;
+}
+main .wrap .project .swiper-container .btn a {
+    margin-right: 30px; font-weight: 500; font-size: 1.125rem;
+    border-radius: 10px; background-color: #DC8686;
+    color: #F5EEE6; text-align: center; 
+    width: 100px; height: 40px; line-height: 40px;
+    display: inline-block; 
 }
 main .wrap .project .swiper-container .swiper-button-prev{
     color: #776B5D;
@@ -192,5 +227,5 @@ main .wrap .project .swiper-container .swiper-button-next {
     color: #776B5D;
 }
 main .wrap .project .swiper-container .swiper-pagination {
-    bottom: 60px; font-weight: 700; 
+    top: 0; font-weight: 700; 
 }

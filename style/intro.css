@@ -1,24 +1,31 @@
+html ,body {overflow-x:hidden; width:100%;}
 body{margin: 0; display: flex; justify-content: center; align-items: center;
 height: 100vh; background-color: #F5EEE6;}
 main {background-color: #F5EEE6; width: 100vw; height: 100vh;}
 main .intro {}
-main .intro .container {margin: 95px 90px 0;}
+main .intro .container {position: relative; width: 100%; overflow: hidden;}
 main .intro .container h1 {
-    color: #776B5D; font-size: 4rem;
+    margin-top: 20px;
+    left: 100%; position: absolute;
+    color: #B0A695; font-size: 3rem;
+    animation: moveLeft 5s linear infinite;
+    white-space: nowrap;
 }
 main .intro .container .intro_content {
-    margin-top: 65px; display: flex; flex-flow: row nowrap;
-    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 50px; display: flex; flex-flow: column nowrap;
     padding: 75px;
 }
-main .intro .container .intro_content img {
-    width: 240px; height: auto; border-radius: 50%; margin-right: 120px;
-}
-main .intro .container .intro_content .text {background-color: transparent;
-}
 
-main .intro .container .intro_content .text p {background-color: transparent;
-    font-size: 1.8rem; font-weight: 500; margin-top: 60px;
+main .intro .container .intro_content .text {
+    background-color: transparent;
+    margin-top: 60px;
+}
+main .intro .container .intro_content h2 {
+    color: #776B5D; font-size: 3rem; 
+}
+main .intro .container .intro_content .text p {
+    background-color: transparent;
+    font-size: 1.8rem; font-weight: 500; line-height: 1.5;
 }
 main .intro .container .intro_content .text p span {background-color: transparent;
     font-size: 1.8rem; font-weight: 500;
@@ -36,6 +43,7 @@ main .intro .container .intro_content .text .popup .popup_content {
     color: #fff; border-radius: 10px; padding: 5px 10px;
 }
 main .intro .bg {
+    position: absolute; bottom: 0; left: 0; width: 100%;
     margin-top: 62px; height: 230px; background-color: #776B5D;
     z-index: 10; line-height: 230px;
     display:flex; justify-content: center; align-items: center;
@@ -45,4 +53,15 @@ main .intro .bg .see_details {
     border-radius: 10px; box-shadow:0 4px 4px 0 #000 ;
     font-size: 1.8rem; font-weight: 700;
     color: #776B5D;
+}
+main .intro .bg .see_details:hover {
+    color: #B06161; background-color: #E7C6C6;
+}
+@keyframes moveLeft {
+    0% {
+        transform: translateX(-67%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }

@@ -8,6 +8,7 @@
     <title>김은지 포트폴리오</title>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/portfolio.css">
+    <!-- <link rel="stylesheet" href="./style/jquery.fullPage.css"> -->
     <link rel="shortcut icon" href="./images/icon/portfolio.png" type="image/x-icon">
     <link rel="icon" href="./images/icon/portfolio.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,27 +23,41 @@
     <header>
         <div class="top"></div>
         <nav>
-            <button>about</button>
-            <button>Skill</button>
-            <button>Project</button>
+            <a href="#About">About</a>
+            <a href="#Skill">Skill</a>
+            <a href="#Project">Project</a>
         </nav>
     </header>
     <main>
         <div class="wrap">
-            <div class="about">
+            <div class="about section">
                 <!-- js -->
                 <h2>- about -</h2>
                 <div class="about_container">
-                    <!-- 
-                        <div class="box">
-                            <h3 class="about_title"></h3>
-                            <p class="about_content"></p>
-                        </div> 
-                    -->
+                    <dib class="bg">
+                        <div class="photo">
+                            <img src="./images/photo/photo.jpg" alt="">
+                        </div>
+                        <div class="about_content">
+                            <p>2023.10.30 ~ 2024.03.15 그린 컴퓨터 아카데미 - 프론트엔드 개발자 양성 과정 수료</p>
+                            <div class="box">
+                                <div class="left">
+                                    <p><span>이름</span>김은지</p>
+                                    <p><span>이메일</span>s202571@naver.com</p>
+                                    <p><span>전화번호</span>010-8878-6280</p>
+                                </div>
+                                <div class="right">
+                                    <p><span>주소</span>경기도 부천시</p>
+                                    <p><span>학력</span>인천재능대학교(화장품과)</p>
+                                    <p><span>github 주소</span><a href="https://github.com/s202571">https://github.com/s202571</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </dib>
                 </div>
                 <span></span>
             </div>
-            <section class="skill">
+            <section class="skill section">
                 <h2>Skill</h2>
                 <div class="skill_container">
                     <div class="skill_photo">
@@ -60,6 +75,7 @@
                         <button type="button"><img src="images/sklii_icon/gpt2.webp" alt="Gpt"></button>
                         <button type="button"><img src="images/sklii_icon/react2.png" alt="React"></button>
                         <button type="button"><img src="images/sklii_icon/sass1.png" alt="Scss"></button>
+                        <button type="button"><img src="./images/sklii_icon/php.png" alt="php"></button>
                     </div>
                 </div>
                 <div class="skill_explanation">
@@ -75,9 +91,10 @@
                         <img src="./images/sklii_icon/css3.jpg" alt="Css">
                         <img src="./images/sklii_icon/js2.png" alt="Javascript">
                         <img src="./images/sklii_icon/jq1.png" alt="jQuery">
-                        <img src="./images/sklii_icon/gpt2.jpg" alt="Gpt">
+                        <img src="images/sklii_icon/gpt2.webp" alt="Gpt">
                         <img src="./images/sklii_icon/react2.png" alt="React">
                         <img src="./images/sklii_icon/sass1.png" alt="Scss">
+                        <img src="./images/sklii_icon/php.png" alt="php">
                     </div>
                     <div class="skill_text">
                         <!-- <div class="skill_box">
@@ -87,8 +104,8 @@
                     </div>
                 </div>
             </section>
-            <section class="project">
-                <h2>Project</h2>
+            <section class="project section">
+                <h1>Project</h1>
                 <div class="swiper-container slide_wrap">
                     <!--필수-->
                     <div class="swiper-wrapper">
@@ -113,8 +130,8 @@
                                     </dl>
                                 </div>
                                 <div class="btn">
-                                    <button type="button">기획서</button>
-                                    <button type="button">결과</button>
+                                    <a href="#">기획서</a>
+                                    <a href="#">결과</a>
                                 </div>
                             </div>
                         </div>
@@ -139,8 +156,8 @@
                                             <dd>all</dd>
                                         </dl>
                                         <div class="btn">
-                                            <button type="button">기획서</button>
-                                            <button type="button">결과</button>
+                                            <a href="#">기획서</a>
+                                            <a href="#">결과</a>
                                         </div>
                                     </div>
                                 </div>
@@ -167,8 +184,8 @@
                                             <dd>all</dd>
                                         </dl>
                                         <div class="btn">
-                                            <button type="button">기획서</button>
-                                            <button type="button">결과</button>
+                                            <a href="#">기획서</a>
+                                            <a href="#">결과</a>
                                         </div>
                                     </div>
                                 </div>
@@ -187,5 +204,19 @@
         </div>
     </main>
     <script src="./script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/jquery.fullPage.js"></script>
+    <script>
+        // 스크롤
+        $(document).ready(function() {
+            $('.wrap').fullpage({
+            //속성:값, 속성:값,
+            scrollingSpeed:500,//스크롤바 전환속도(기본값 1000)
+            menu:'nav',//사단 메뉴 클릭시 해당 메뉴
+            anchors:['About','Skill','Project'],//메뉴 a #이름과 일치시킨 이름 작성
+            fixedElements: 'header',
+            })
+        });
+    </script>
 </body>
 </html>
