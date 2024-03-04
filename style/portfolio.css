@@ -1,5 +1,5 @@
 * {cursor: none; z-index: 1;}
-html ,body {overflow-x:hidden; width:100%; min-width: 1400px;}
+html ,body {overflow-x:hidden; width:100%; min-width: 1470px;}
 /* 글자 바꾸는 방법
     h1 {
     font-weight: 800; font-size: 5rem;
@@ -46,24 +46,25 @@ main .wrap {padding-top: 176px; width: 100vw;}
 /* about */
 main .wrap .about {}
 main .wrap .about h2 {
-    margin-top: 100px;
+    margin-top: 30px;
     color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
 }
 main .wrap .about h3 {
+    text-align: center;
     font-size: 1.5rem; font-weight: 600;
-    margin-left: 116px; line-height: 1.5;
+    line-height: 1.5;
     margin-top: 55px;
 }
 main .wrap .about .about_container {
     margin: 50px 116px 0;
 }
 main .wrap .about .about_container .bg {
-    background-color:#B0A695; display: flex; flex-flow: row nowrap;
+    background-color:#fff; display: flex; flex-flow: row nowrap;
     border-radius: 10px; align-items: center;
     padding: 30px 60px; width: 100vw;
 }
 main .wrap .about .about_container .bg .photo {
-    overflow: hidden; margin-right: 70px;
+    overflow: hidden; margin-right: 30px;
 }
 main .wrap .about .about_container .bg .photo img {
     border-radius: 50%; width: 300px; height: auto; 
@@ -75,7 +76,7 @@ main .wrap .about .about_container .bg .about_content {
 }
 main .wrap .about .about_container .bg .about_content > p {
     font-size: 1.125rem; font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 40px; font-family: "Noto Sans KR", sans-serif;
 }
 main .wrap .about .about_container .bg .about_content > p:first-of-type {
     font-size: 1.5rem; 
@@ -87,18 +88,18 @@ main .wrap .about .about_container .bg .about_content .box .left {
     margin-right: 200px;
 }
 main .wrap .about .about_container .bg .about_content .box .left p {
-    font-size: 1.25rem; margin-top: 20px; font-weight: 500;
+    font-size: 1.25rem; margin-top: 20px; 
 }
 main .wrap .about .about_container .bg .about_content .box .left p span {
-    font-size: 1.5rem; font-weight: 600;
+    font-size: 1.5rem; 
     margin-right: 10px;
 }
 main .wrap .about .about_container .bg .about_content .box .right {}
 main .wrap .about .about_container .bg .about_content .box .right p {
-    font-size: 1.25rem; margin-top: 20px;font-weight: 500;
+    font-size: 1.25rem; margin-top: 20px;
 }
 main .wrap .about .about_container .bg .about_content .box .right p span {
-    font-size: 1.5rem; font-weight: 600; margin-right: 10px;
+    font-size: 1.5rem; margin-right: 10px;
 }
 main .wrap .about .about_container .bg .about_content .box .right p a {
     text-decoration: underline; font-size: 1.25rem;
@@ -204,7 +205,7 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container {
     margin-top: 20px; display: flex; width: 100%;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo {
-    position: relative; overflow: hidden;  margin-right: 130px;
+    position: relative; overflow: hidden;  margin-right: 30px;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo img {
     height: 400px; width: auto;
@@ -258,7 +259,7 @@ main .wrap .project .swiper-container .btn button:hover {
     color: #B06161;
 }
 main .wrap .project .swiper-container .result_btn {
-    position: absolute; left: 50%; bottom: 35px;
+    position: absolute; left: 63%; top: 100px;
     transform: translateX(-50%); cursor: none;
 }
 main .wrap .project .swiper-container .result_btn a {
@@ -267,6 +268,9 @@ main .wrap .project .swiper-container .result_btn a {
     color: #F5EEE6; text-align: center; 
     width: 100px; height: 40px; line-height: 40px;
     display: inline-block; 
+}
+main .wrap .project .swiper-container .result_btn a:hover {
+    background-color: #E7C6C6; color: #B06161;
 }
 main .wrap .project .swiper-container .swiper-button-prev{
     color: #776B5D; right: auto;
