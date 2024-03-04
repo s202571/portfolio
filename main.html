@@ -8,7 +8,7 @@
     <title>김은지 포트폴리오</title>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/portfolio.css">
-    <!-- <link rel="stylesheet" href="./style/jquery.fullPage.css"> -->
+    <link rel="stylesheet" href="./style/jquery.fullPage.css">
     <link rel="shortcut icon" href="./images/icon/portfolio.png" type="image/x-icon">
     <link rel="icon" href="./images/icon/portfolio.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -210,11 +210,23 @@
         // 스크롤
         $(document).ready(function() {
             $('.wrap').fullpage({
-            //속성:값, 속성:값,
-            scrollingSpeed:500,//스크롤바 전환속도(기본값 1000)
-            menu:'nav',//사단 메뉴 클릭시 해당 메뉴
-            anchors:['About','Skill','Project'],//메뉴 a #이름과 일치시킨 이름 작성
-            fixedElements: 'header',
+                //속성:값, 속성:값,
+                scrollingSpeed:500,//스크롤바 전환속도(기본값 1000)
+                menu:'nav',//사단 메뉴 클릭시 해당 메뉴
+                anchors:['About','Skill','Project'],//메뉴 a #이름과 일치시킨 이름 작성
+                fixedElements: 'header',
+                afterLoad: function(anchorLink, index) {
+                // 현재 활성화된 섹션의 인덱스를 가져옵니다.
+                // index는 1부터 시작합니다.
+                // 네비게이션 링크의 인덱스와 섹션 인덱스가 일치하면 활성 클래스를 추가합니다.
+                $('nav a').eq(index - 1).addClass('active').siblings().removeClass('active');
+                },
+                onLeave: function(index, nextIndex, direction) {
+                // 스크롤 이벤트가 발생할 때마다 호출됩니다.
+                // 네비게이션 링크의 색상을 변경합니다.
+                $('nav a').removeClass('active'); // 모든 네비게이션 링크의 활성 클래스 제거
+                $('nav a').eq(nextIndex - 1).addClass('active'); // 다음 섹션에 해당하는 네비게이션 링크에 활성 클래스 추가
+                },
             })
         });
     </script>

@@ -126,6 +126,38 @@ skill_list.forEach((skill) => {
     skill_text.appendChild(skill_box);
 })
 
+// 버튼 클릭시
+const skill_btn = document.querySelectorAll('.skill_photo button')
+const last_skill_photo = document.querySelectorAll('.last_skill_photo img')
+const skill_title = document.querySelectorAll('.skill_title')
+const skill_content = document.querySelectorAll('.skill_content')
+
+console.log(skill_btn,last_skill_photo,skill_title,skill_content)
+
+let hide = (name)=>{
+    for(let i of name){
+        i.style.display = 'none'
+    }
+}
+
+last_skill_photo[0].style.display = 'block'
+skill_title[0].style.display = 'block'
+skill_content[0].style.display = 'block'
+hide(last_skill_photo)
+hide(skill_title)
+hide(skill_content)
+
+skill_btn.forEach((t,i)=>{
+    t.addEventListener('click',()=>{
+        last_skill_photo[i].style.display = 'bolck'
+        hide(last_skill_photo)
+        skill_title[i].style.display = 'bolck'
+        hide(skill_title)
+        skill_content[i].style.display = 'bolck'
+        hide(skill_content)
+        console.log('.')
+    })
+})
 
 // 슬라이드
 let swiperContainer = document.querySelector('.swiper-container')
@@ -139,6 +171,7 @@ let swiper = new Swiper('.swiper-container', {
     loop: true,
     autoplay:{delay:3000,},
     centeredSlides : true,
+    direction:'horizontal',
     pagination: {
         el: '.swiper-pagination',
         type:'fraction'
@@ -164,5 +197,5 @@ pause_btn.addEventListener('click', ()=>{
 start_btn.addEventListener('click',()=>{
     swiper.autoplay.start()
 })
-console.log(pause_btn)
 console.log(start_btn)
+
