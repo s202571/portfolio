@@ -23,49 +23,49 @@
 const skill_list = [
     {
         skill_name:'Api',
-        skill_text:'지도, 우편번호 등 간단한 것을 연결하여 사용할 수 있으며 채팅 api 구현 가능',
+        skill_text:'지도, 우편번호 등 간단한 것을 연결하여 사용할 수 있으며 채팅 api 구현 가능합니다',
     },{
         skill_name:'Notion',
-        skill_text:'사용 및 제작 가능',
+        skill_text:'사용하여 메모, 일정관리 등을 할 수 있습니다.',
     },{
         skill_name:'Figma',
-        skill_text:'사용 및 제작 가능',
+        skill_text:'피그마를 활용하여 와이어프레임 및 프로토타입을 구성 할 수 있습니다.',
     },{
         skill_name:'Photoshop',
-        skill_text:'간단한 작업 가능',
+        skill_text:'사진 보정, 합성, 상세페이지, SNS 디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.',
     },{
         skill_name:'illustrator',
-        skill_text:'간단한 작업 가능',
+        skill_text:'간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 벡터 디자인을 제작할 수 있습니다.',
     },{
         skill_name:'GitHub',
-        skill_text:'사용함에 있어 불편함 없음',
+        skill_text:'협업을 위해서 사용 할 수 있으며 안전하게 저장할 수 있습니다',
     },{
         skill_name:'Git',
-        skill_text:'간단한 명령어 사용 가능',
+        skill_text:'git 명령어를 이용한 github를 이용할 수 있습니다',
     },{
         skill_name:'Html',
-        skill_text:'웹사이트 구조 제작 가능',
+        skill_text:'유효성 문제없이 HTML5 웹접근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성할 수 있습니다.',
     },{
         skill_name:'Css',
-        skill_text:'웹사이트 구조 제작 가능',
+        skill_text:'애니메이션을 활용한 디자인을 제작할 수 있습니다',
     },{
         skill_name:'Javascript',
-        skill_text:'동적 움직임 사용 가능',
+        skill_text:'슬라이드, 메뉴, 스크롤 애니메이션 기능 등 최신 트렌드에 적용된 다양한 동적 기능을 구현할 수 있습니다.',
     },{
         skill_name:'jQuery',
-        skill_text:'제작 가능',
+        skill_text:'제이쿼리를 활용하여 동적 기능을 구현할 수 있습니다',
     },{
         skill_name:'Gpt',
-        skill_text:'지도, 우편번호 등 간단한 것을 연결하여 사용할 수 있습니다',
+        skill_text:'ai를 이용한 chatGpt를 제작할 수 있습니다',
     },{
         skill_name:'React',
-        skill_text:'사용 해 본 적 있음',
+        skill_text:'리액트를 사용해 본 적 있습니다',
     },{
         skill_name:'Scss',
-        skill_text:'능숙하게 사용 가능',
+        skill_text:'scss를 활용한 디자인을 제작할 수 있습니다',
     },{
         skill_name:'Php',
-        skill_text:'공통 태그 php 연결 가능',
+        skill_text:'php include 명령어를 이용한 공통 페이지 관리를 할 수 있습니다.',
     },
 ]
 
@@ -128,33 +128,42 @@ skill_list.forEach((skill) => {
 
 // 버튼 클릭시
 const skill_btn = document.querySelectorAll('.skill_photo button')
+const skill_img = document.querySelectorAll('.skill_photo button img')
 const last_skill_photo = document.querySelectorAll('.last_skill_photo img')
 const skill_title = document.querySelectorAll('.skill_title')
 const skill_content = document.querySelectorAll('.skill_content')
+const skill_explanation = document.querySelector('.skill_explanation p')
 
 console.log(skill_btn,last_skill_photo,skill_title,skill_content)
+console.log(skill_explanation,skill_img)
 
 let hide = (name)=>{
     for(let i of name){
         i.style.display = 'none'
     }
 }
-
-last_skill_photo[0].style.display = 'block'
-skill_title[0].style.display = 'block'
-skill_content[0].style.display = 'block'
+let hide_filter = (name)=>{
+    for(let i of name){
+        i.style.filter = 'none'
+    }
+}
 hide(last_skill_photo)
 hide(skill_title)
 hide(skill_content)
 
 skill_btn.forEach((t,i)=>{
     t.addEventListener('click',()=>{
-        last_skill_photo[i].style.display = 'bolck'
         hide(last_skill_photo)
-        skill_title[i].style.display = 'bolck'
         hide(skill_title)
-        skill_content[i].style.display = 'bolck'
         hide(skill_content)
+        last_skill_photo[i].style.display = 'block'
+        skill_title[i].style.display = 'block'
+        skill_content[i].style.display = 'block'
+        skill_explanation.style.display = 'none'
+    })
+    t.addEventListener('mouseover',()=>{
+        hide_filter(skill_img)
+        skill_img[i].style.filter = 'opacity(50%)'
         console.log('.')
     })
 })
@@ -192,10 +201,15 @@ const start_btn = document.querySelector('#start')
 pause_btn.addEventListener('click', ()=>{
     // 정지하고 싶은 swiper을 가진 변수명 연결
     swiper.autoplay.stop()
-    console.log('.')
 })
 start_btn.addEventListener('click',()=>{
     swiper.autoplay.start()
 })
 console.log(start_btn)
 
+// 마우스 바꾸기
+const circle = document.querySelector('.circle')
+window.addEventListener('mousemove', (e)=>{
+    circle.style.left = `${e.clientX}px`
+    circle.style.top = `${e.clientY}px`
+})

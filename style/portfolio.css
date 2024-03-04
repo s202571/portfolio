@@ -1,3 +1,4 @@
+* {cursor: none; z-index: 1;}
 html ,body {overflow-x:hidden; width:100%;}
 /* 글자 바꾸는 방법
     h1 {
@@ -27,17 +28,34 @@ header nav a {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
 header nav a.active {
     color: #DC8686;
 }
+.circle {
+    position: fixed; 
+    /* 마우스 가운데로 가게 만들어줌  */
+    transform: translate(-50%, -50%);
+    /* 마우스가 눌리게 만듬(기능 해제로 다른 이벤트 사용가능) */
+    pointer-events: none;
+    z-index: 9999;
+}
+.circle img {
+    width: 30px; height: auto;
+}
 main {}
 /* intro */
 
 main .wrap {padding-top: 176px; width: 100vw;}
 /* about */
-main .wrap .about {margin: 100px 90px; }
+main .wrap .about {}
 main .wrap .about h2 {
+    margin-top: 100px;
     color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
 }
+main .wrap .about h3 {
+    font-size: 1.5rem; font-weight: 600;
+    margin-left: 116px; line-height: 1.5;
+    margin-top: 55px;
+}
 main .wrap .about .about_container {
-    margin: 100px auto 116px;
+    margin: 50px 116px 0;
 }
 main .wrap .about .about_container .bg {
     background-color:#B0A695; display: flex; flex-flow: row nowrap;
@@ -55,9 +73,15 @@ main .wrap .about .about_container .bg .photo img {
 main .wrap .about .about_container .bg .about_content {
     display: flex; flex-flow: column nowrap; justify-content: flex-start;
 }
-main .wrap .about .about_container .bg .about_content > p {font-size: 1.5rem; font-weight: 600;}
+main .wrap .about .about_container .bg .about_content > p {
+    font-size: 1.125rem; font-weight: 600;
+    margin-bottom: 40px;
+}
+main .wrap .about .about_container .bg .about_content > p:first-of-type {
+    font-size: 1.5rem; 
+}
 main .wrap .about .about_container .bg .about_content .box {
-    margin-top: 50px; display: flex; flex-flow: row nowrap;
+    margin-top: 10px; display: flex; flex-flow: row nowrap;
 }
 main .wrap .about .about_container .bg .about_content .box .left {
     margin-right: 200px;
@@ -93,7 +117,7 @@ main .wrap .about > span {
 /* skill */
 main .wrap .skill {
     background-color: #B06161;
-    padding: 95px 0;
+    padding: 95px 0 0; height: 100%;
 }
 main .wrap .skill h2 {
     color: #E7C6C6; font-weight: 600; font-size: 4rem; text-align: center;
@@ -104,7 +128,7 @@ main .wrap .skill .skill_container {
     padding: 30px 65px; border-radius: 40px;
 }
 main .wrap .skill .skill_container .skill_photo {
-    display: flex; flex-flow: row wrap; 
+    display: flex; flex-flow: row wrap; justify-content: center;
     gap: 20px;
 }
 main .wrap .skill .skill_container .skill_photo button {}
@@ -114,23 +138,43 @@ main .wrap .skill .skill_container .skill_photo button img {
 main .wrap .skill .skill_explanation {
     background-color: #fff; margin: 70px 144px;
     padding: 30px 65px; border-radius: 40px;
-    display: flex;
+    position: relative;
 }
-main .wrap .skill .skill_explanation .last_skill_photo {
-    margin-right: 58px;
+main .wrap .skill .skill_explanation::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #ffffff; /* 배경색과 동일하게 설정합니다. */
+    top: -15px;
+    left: 50%; /* 말풍선의 좌우 여백에 따라 조절합니다. */
+    transform: translateX(-50%);
 }
-main .wrap .skill .skill_explanation .last_skill_photo img {
-    width: auto; height: 150px; 
+main .wrap .skill .skill_explanation > p {
+    position: absolute; top: 50%; left: 0;
+    text-align: center; width: 100%; align-self: center;
+    font-size: 1.5rem; font-weight: 600;
 }
-main .wrap .skill .skill_explanation .skill_text {
+main .wrap .skill .skill_explanation .contents_wrap {
+    display: flex; width: 100%; align-items: center; height: 150px;
 }
-main .wrap .skill .skill_explanation .skill_text .box {padding: 0 100px;}
-main .wrap .skill .skill_explanation .skill_text .box .skill_title {
+main .wrap .skill .skill_explanation .contents_wrap .last_skill_photo {
+    margin-right: 58px; 
+}
+main .wrap .skill .skill_explanation .contents_wrap .last_skill_photo img {
+    width: 150px; height: auto;
+}
+main .wrap .skill .skill_explanation .contents_wrap .skill_text {
+}
+main .wrap .skill .skill_explanation .contents_wrap .skill_text .box {padding: 0 100px;}
+main .wrap .skill .skill_explanation .contents_wrap .skill_text .box .skill_title {
     font-size: 3rem; font-weight: 700;
 }
-main .wrap .skill .skill_explanation .skill_text .box .skill_content {
+main .wrap .skill .skill_explanation .contents_wrap .skill_text .box .skill_content {
     margin-top: 20px; font-size: 1.25rem; font-family: "Noto Sans KR", sans-serif;
-    font-weight: 500;
+    font-weight: 500; line-height: 1.5;
 }
 /* .project */
 main .wrap .project {
@@ -157,11 +201,13 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide h2 {
     font-size: 2rem; font-weight: 700; color: #776B5D;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container {
-    margin-top: 20px; display: flex; width: 65%;
+    margin-top: 20px; display: flex; width: 100%;
 }
-main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo {position: relative; overflow: hidden;}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo {
+    position: relative; overflow: hidden;  margin-right: 130px;
+}
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo img {
-    height: 400px; width: auto; margin-right: 130px;
+    height: 400px; width: auto;
     z-index: 100; position: relative;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link button {
@@ -180,18 +226,23 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .
     background-color: #E7C6C6; transform: translateX(70px);
     width: 70px; transition: all 0.3s;
 }
-main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content {
-
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content .text  {
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content dl {
-    margin-top: 20px;
+    margin-top: 20px; margin-right: 15px;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content dl dt {
     font-size: 2rem;
     white-space: nowrap;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content dl dd {
-    font-size: 1.25rem;
+    font-size: 1.25rem; 
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content ul {
+    margin-top: 10px; position: relative; top: -246px; right: -236px;
+}
+main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .content ul li {
+    font-size: 1.25rem; font-weight: 600; color:#B06161;
 }
 main .wrap .project .swiper-container .btn {
     position: absolute; left: 50%; bottom: 150px;
@@ -206,7 +257,11 @@ main .wrap .project .swiper-container .btn button {
 main .wrap .project .swiper-container .btn button:hover {
     color: #B06161;
 }
-main .wrap .project .swiper-container .btn a {
+main .wrap .project .swiper-container .result_btn {
+    position: absolute; left: 50%; bottom: 35px;
+    transform: translateX(-50%); cursor: none;
+}
+main .wrap .project .swiper-container .result_btn a {
     margin-right: 30px; font-weight: 500; font-size: 1.125rem;
     border-radius: 10px; background-color: #DC8686;
     color: #F5EEE6; text-align: center; 
