@@ -208,7 +208,7 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .
     position: relative; overflow: hidden;  margin-right: 30px;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo img {
-    height: 400px; width: auto;
+    width: 400px; height: auto;
     z-index: 100; position: relative;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo .project_link button {
