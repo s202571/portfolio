@@ -1,5 +1,5 @@
 * {cursor: none; z-index: 1;}
-html ,body {overflow-x:hidden; width:100%;}
+html ,body {overflow-x:hidden; width:100%; min-width: 1400px;}
 /* 글자 바꾸는 방법
     h1 {
     font-weight: 800; font-size: 5rem;
