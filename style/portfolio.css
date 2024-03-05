@@ -263,7 +263,7 @@ main .wrap .project .swiper-container .result_btn {
     transform: translateX(-50%); cursor: none;
 }
 main .wrap .project .swiper-container .result_btn a {
-    margin-right: 30px; font-weight: 500; font-size: 1.125rem;
+    margin-right: 10px; font-weight: 500; font-size: 1.125rem;
     border-radius: 10px; background-color: #DC8686;
     color: #F5EEE6; text-align: center; 
     width: 100px; height: 40px; line-height: 40px;

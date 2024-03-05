@@ -213,3 +213,10 @@ window.addEventListener('mousemove', (e)=>{
     circle.style.left = `${e.clientX}px`
     circle.style.top = `${e.clientY}px`
 })
+
+const result_btn = document.querySelectorAll('.result_btn')
+
+console.log(result_btn)
+result_btn[2].addEventListener('click',()=>{
+    alert('현재 제작중 입니다.')
+})
