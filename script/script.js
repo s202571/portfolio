@@ -47,22 +47,22 @@ const skill_list = [
         skill_text:'유효성 문제없이 HTML5 웹접근성에 올바르며 모든 사람들이 편하게 이용할 수 있는 HTML 구조를 구성할 수 있습니다.',
     },{
         skill_name:'Css',
-        skill_text:'애니메이션을 활용한 디자인을 제작할 수 있습니다',
+        skill_text:'Css를 활용한 화려한 디자인과 애니메이션 기능을 활용한 디자인을 제작할 수 있습니다',
     },{
         skill_name:'Javascript',
         skill_text:'슬라이드, 메뉴, 스크롤 애니메이션 기능 등 최신 트렌드에 적용된 다양한 동적 기능을 구현할 수 있습니다.',
     },{
         skill_name:'jQuery',
-        skill_text:'제이쿼리를 활용하여 동적 기능을 구현할 수 있습니다',
+        skill_text:'제이쿼리를 활용하여 Cookie 등 동적 기능을 구현할 수 있습니다',
     },{
         skill_name:'Gpt',
-        skill_text:'ai를 이용한 chatGpt를 제작할 수 있습니다',
+        skill_text:'Ai를 이용한 채팅 프로그램으로 chatGpt를 제작할 수 있습니다',
     },{
         skill_name:'React',
-        skill_text:'리액트를 사용해 본 적 있습니다',
+        skill_text:'리액트를 공부하고 있습니다.',
     },{
         skill_name:'Scss',
-        skill_text:'scss를 활용한 디자인을 제작할 수 있습니다',
+        skill_text:'Scss를 활용한 디자인을 제작할 수 있습니다',
     },{
         skill_name:'Php',
         skill_text:'php include 명령어를 이용한 공통 페이지 관리를 할 수 있습니다.',
