@@ -169,8 +169,3 @@ window.addEventListener('mousemove', (e)=>{
 })
 
 const result_btn = document.querySelectorAll('.result_btn a')
-
-console.log(result_btn)
-result_btn[7].addEventListener('click',()=>{
-    alert('현재 제작중 입니다.')
-})
