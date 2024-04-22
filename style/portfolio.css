@@ -14,20 +14,6 @@ html ,body {overflow-x:hidden; width:100%; min-width: 1470px;}
     100% {background-position-x: 400%;}
 } */
 main {background-color: #F5EEE6;}
-header {position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;}
-header .top {
-    background-color: #DC8686;
-    height:50px ; z-index: 999;
-}
-header nav {
-    margin: 40px 46px 0; float: right; 
-}
-header nav a {font-size: 2.25rem; font-weight: 600; margin-right: 30px;
-    color: #E7C6C6;
-}
-header nav a.active {
-    color: #DC8686;
-}
 .circle {
     position: fixed; 
     /* 마우스 가운데로 가게 만들어줌  */

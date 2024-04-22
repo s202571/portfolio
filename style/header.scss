@@ -11,9 +11,13 @@ header {
     }
     nav {
     margin: 40px 46px 0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
+    float: right; 
+    a {
+        font-size: 2.25rem; font-weight: 600; margin-right: 30px;
+    color: #E7C6C6;
+    }
+    a.active {
+        color: #DC8686;
+    }
     }
 }
