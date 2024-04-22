@@ -143,10 +143,6 @@ let swiper = new Swiper('.swiper-container', {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    //마우스 휠 가능
-    mousewheel:{
-        invert:true,  
-    },
 })
 
 // 재생 정지 버튼으로 swiper 제어하기

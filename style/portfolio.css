@@ -44,7 +44,8 @@ main {}
 
 main .wrap {padding-top: 176px; width: 100vw;}
 /* about */
-main .wrap .about {}
+main .wrap .about {height: 100%;
+}
 main .wrap .about h2 {
     margin-top: 30px;
     color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
@@ -53,10 +54,10 @@ main .wrap .about h3 {
     text-align: center;
     font-size: 1.5rem; font-weight: 600;
     line-height: 1.5;
-    margin-top: 55px;
+    margin-top: 35px;
 }
 main .wrap .about .about_container {
-    margin: 50px 116px 0;
+    margin: 30px 116px 0;
 }
 main .wrap .about .about_container .bg {
     background-color:#fff; display: flex; flex-flow: row nowrap;
@@ -64,7 +65,7 @@ main .wrap .about .about_container .bg {
     padding: 30px 60px; width: 100vw;
 }
 main .wrap .about .about_container .bg .photo {
-    overflow: hidden; margin-right: 30px;
+    overflow: hidden; margin-right: 65px;
 }
 main .wrap .about .about_container .bg .photo img {
     border-radius: 50%; width: 300px; height: auto; 
@@ -117,15 +118,14 @@ main .wrap .about > span {
 }
 /* skill */
 main .wrap .skill {
-    background-color: #B06161;
-    padding: 95px 0 0; height: 100%;
+    background-color: #B06161; height: 100%;
 }
 main .wrap .skill h2 {
     color: #E7C6C6; font-weight: 600; font-size: 4rem; text-align: center;
-    margin: 0 auto 100px; 
+    margin: 0 auto 45px; 
 }
 main .wrap .skill .skill_container {
-    background-color: #fff; margin: 0 144px;
+    background-color: #fff; margin: 45px 144px;
     padding: 30px 65px; border-radius: 40px;
 }
 main .wrap .skill .skill_container .skill_photo {
@@ -137,7 +137,7 @@ main .wrap .skill .skill_container .skill_photo button img {
     width: 75px; height: auto; 
 }
 main .wrap .skill .skill_explanation {
-    background-color: #fff; margin: 70px 144px;
+    background-color: #fff; margin: 40px 144px;
     padding: 30px 65px; border-radius: 40px;
     position: relative;
 }
@@ -182,7 +182,8 @@ main .wrap .project {
     margin: 100px 0;
 }
 main .wrap .project h1 {
-    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center; margin-bottom: 50px;
+    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center; margin-bottom: 45px;
+    float: left; margin-left: 300px;
 }
 main .wrap .project .swiper-container {
     position: relative; width: 100%; height: fit-content;

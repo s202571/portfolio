@@ -1,0 +1,19 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+header .top {
+  background-color: #DC8686;
+  height: 50px;
+  z-index: 999;
+}
+header nav {
+  margin: 40px 46px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=header.css.map */
