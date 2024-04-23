@@ -168,7 +168,7 @@ main .wrap .project {
     margin: 100px 0;
 }
 main .wrap .project h1 {
-    color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center; margin-bottom: 45px;
+    color: #776B5D; font-weight: 600; font-size: 4rem; margin-bottom: 15px;
     float: left; margin-left: 30px;
 }
 main .wrap .project .swiper-container {
@@ -233,7 +233,7 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .
     font-size: 1.25rem; font-weight: 600; color:#B06161;
 }
 main .wrap .project .swiper-container .btn {
-    position: absolute; left: 50%; bottom: 150px;
+    position: absolute; left: 50%; bottom: 175px;
     transform: translateX(-50%);
 }
 main .wrap .project .swiper-container .btn #pause {
@@ -246,7 +246,7 @@ main .wrap .project .swiper-container .btn button:hover {
     color: #B06161;
 }
 main .wrap .project .swiper-container .result_btn {
-    position: absolute; left: 63%; top: 100px;
+    position: absolute; left: 63%; top: 0;
     transform: translateX(-50%); cursor: none;
 }
 main .wrap .project .swiper-container .result_btn a {
@@ -266,7 +266,7 @@ main .wrap .project .swiper-container .swiper-button-next {
     color: #776B5D; left: auto; z-index: 999;
 }
 main .wrap .project .swiper-container .swiper-pagination {
-    bottom: 95px; font-weight: 700; 
+    bottom: 120px; font-weight: 700; 
 }
 main .wrap .design {}
 main .wrap .design h2 {
