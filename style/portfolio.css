@@ -169,7 +169,7 @@ main .wrap .project {
 }
 main .wrap .project h1 {
     color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center; margin-bottom: 45px;
-    float: left; margin-left: 300px;
+    float: left; margin-left: 30px;
 }
 main .wrap .project .swiper-container {
     position: relative; width: 100%; height: fit-content;
@@ -267,4 +267,17 @@ main .wrap .project .swiper-container .swiper-button-next {
 }
 main .wrap .project .swiper-container .swiper-pagination {
     bottom: 95px; font-weight: 700; 
+}
+main .wrap .design {}
+main .wrap .design h2 {
+    color: #776B5D; font-weight: 600; font-size: 4rem; margin-bottom: 45px;
+    margin-left: 30px;
+}
+main .wrap .design .project_photo {
+    margin: 30px;
+    display: flex; flex-flow: row wrap;
+    justify-content: space-between; align-items: center;
+}
+main .wrap .design .project_photo img {
+    width: calc(100% / 3 - 20px); height: auto;
 }
