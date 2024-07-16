@@ -1,5 +1,7 @@
 * {cursor: none; z-index: 1;}
-html ,body {overflow-x:hidden; width:100%; min-width: 1470px;}
+html ,body {overflow-x:hidden; 
+    background-color: #F5EEE6; margin: 0;
+}
 /* 글자 바꾸는 방법
     h1 {
     font-weight: 800; font-size: 5rem;
@@ -13,7 +15,6 @@ html ,body {overflow-x:hidden; width:100%; min-width: 1470px;}
     0% {background-position-x:100% ;}
     100% {background-position-x: 400%;}
 } */
-main {background-color: #F5EEE6;}
 .circle {
     position: fixed; 
     /* 마우스 가운데로 가게 만들어줌  */
@@ -104,7 +105,7 @@ main .wrap .about > span {
 }
 /* skill */
 main .wrap .skill {
-    background-color: #B06161; height: 100%;
+    background-color: #B06161; min-height: 100vh; width: 100%;
 }
 main .wrap .skill h2 {
     color: #E7C6C6; font-weight: 600; font-size: 4rem; text-align: center;
@@ -165,15 +166,14 @@ main .wrap .skill .skill_explanation .contents_wrap .skill_text .box .skill_cont
 }
 /* .project */
 main .wrap .project {
-    margin: 100px 0;
+    margin: 100px 0; position: relative;
 }
 main .wrap .project h1 {
     color: #776B5D; font-weight: 600; font-size: 4rem; margin-bottom: 15px;
-    float: left; margin-left: 30px;
+    margin-left: 30px; 
 }
 main .wrap .project .swiper-container {
-    position: relative; width: 100%; height: fit-content;
-    max-width: 1400px; margin: 0 auto; overflow: hidden;
+    position: relative; width: 100%; overflow: hidden;
 }
 main .wrap .project .swiper-container .swiper-wrapper {
     display: flex;
@@ -189,7 +189,7 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide h2 {
     font-size: 2rem; font-weight: 700; color: #776B5D;
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container {
-    margin-top: 20px; display: flex; width: 100%;
+    margin-top: 20px; display: flex; position: relative; 
 }
 main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .photo {
     position: relative; overflow: hidden;  margin-right: 30px;
@@ -234,23 +234,25 @@ main .wrap .project .swiper-container .swiper-wrapper .swiper-slide .container .
 }
 main .wrap .project .swiper-container .btn {
     position: absolute; left: 50%; bottom: 175px;
-    transform: translateX(-50%);
+    transform: translateX(-50%); cursor: none;
 }
 main .wrap .project .swiper-container .btn #pause {
     margin-right: 30px; 
 }
 main .wrap .project .swiper-container .btn button {
-    z-index: 999;
+    z-index: 999; cursor: none;
 }
 main .wrap .project .swiper-container .btn button:hover {
     color: #B06161;
 }
 main .wrap .project .swiper-container .result_btn {
-    position: absolute; left: 63%; top: 0;
+    position: absolute; left: 50%; bottom: -150px;
     transform: translateX(-50%); cursor: none;
+    display: flex; justify-content: center;
+    width: 100%;
 }
 main .wrap .project .swiper-container .result_btn a {
-    margin-right: 10px; font-weight: 500; font-size: 1.125rem;
+    margin:0 10px; font-weight: 500; font-size: 1.125rem;
     border-radius: 10px; background-color: #DC8686;
     color: #F5EEE6; text-align: center; 
     width: 100px; height: 40px; line-height: 40px;
@@ -260,13 +262,14 @@ main .wrap .project .swiper-container .result_btn a:hover {
     background-color: #E7C6C6; color: #B06161;
 }
 main .wrap .project .swiper-container .swiper-button-prev{
-    color: #776B5D; right: auto;
+    color: #776B5D; position: absolute;
+    top: 50%; left:10%;
+    transform: translate(-50%, -50%);
 }
 main .wrap .project .swiper-container .swiper-button-next {
-    color: #776B5D; left: auto; z-index: 999;
-}
-main .wrap .project .swiper-container .swiper-pagination {
-    bottom: 120px; font-weight: 700; 
+    color: #776B5D; position: absolute;
+    top: 50%; right: 10px;
+    transform: translate(-50%, -50%);
 }
 main .wrap .design {}
 main .wrap .design h2 {
