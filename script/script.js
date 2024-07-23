@@ -158,10 +158,43 @@ start_btn.addEventListener('click',()=>{
 console.log(start_btn)
 
 // 마우스 바꾸기
-const circle = document.querySelector('.circle')
-window.addEventListener('mousemove', (e)=>{
-    circle.style.left = `${e.clientX}px`
-    circle.style.top = `${e.clientY}px`
-})
+document.addEventListener('DOMContentLoaded', () => {
+    const circle = document.querySelector('.circle');
+
+    // 마우스 이동 시 이미지 업데이트
+    function updateCirclePosition(x, y) {
+        circle.style.left = `${x}px`;
+        circle.style.top = `${y}px`;
+    }
+
+     // 마우스 이동 시 커서 위치 업데이트
+    document.addEventListener('mousemove', (e) => {
+        updateCirclePosition(e.clientX, e.clientY);
+    });
+
+    // 터치 이동 시 커서 위치 업데이트
+    document.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+            updateCirclePosition(e.touches[0].clientX, e.touches[0].clientY);
+        }
+    });
+});
+
+
+
 
 const result_btn = document.querySelectorAll('.result_btn a')
+
+
+const swiper01 = new Swiper('.swiper-container01', {
+    slidesPerView: 'auto',
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+    on: {
+        // Swiper가 초기화될 때 커서 위치 업데이트
+        init: function () {
+            // 초기화 시 마우스와 터치 이벤트를 사용해 커서 위치를 업데이트
+        }
+    }
+});

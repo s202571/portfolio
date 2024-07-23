@@ -1,5 +1,5 @@
 * {cursor: none; z-index: 1;}
-html ,body {overflow-x:hidden; 
+html ,body {overflow-x:hidden; height: 100%;
     background-color: #F5EEE6; margin: 0;
 }
 /* 글자 바꾸는 방법
@@ -22,9 +22,11 @@ html ,body {overflow-x:hidden;
     /* 마우스가 눌리게 만듬(기능 해제로 다른 이벤트 사용가능) */
     pointer-events: none;
     z-index: 9999;
+    transition: transform 0.1s ease; /* 부드러운 움직임을 위해 트랜지션 추가 */
 }
 .circle img {
     width: 30px; height: auto;
+    z-index: 999;
 }
 main {}
 /* intro */
@@ -273,14 +275,37 @@ main .wrap .project .swiper-container .swiper-button-next {
 }
 main .wrap .design {}
 main .wrap .design h2 {
-    color: #776B5D; font-weight: 600; font-size: 4rem; margin-bottom: 45px;
+    color: #776B5D; font-weight: 600; font-size: 4rem; margin-bottom: 15px;
     margin-left: 30px;
 }
-main .wrap .design .project_photo {
-    margin: 30px;
-    display: flex; flex-flow: row wrap;
-    justify-content: space-between; align-items: center;
+main .wrap .design .swiper-container01 {
+    overflow: visible;
+    width: 90%; margin-left: 30px;
 }
-main .wrap .design .project_photo img {
-    width: calc(100% / 3 - 20px); height: auto;
+main .wrap .design .swiper-container01 .project_photo {
+    width: fit-content;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+main .wrap .design .swiper-container01 .project_photo .swiper-slide {
+    width: 340px !important;
+    margin-right: 30px;
+    cursor: grab;
+}
+main .wrap .design .swiper-container01 .project_photo .swiper-slide img {
+    width: 100%; height: auto; vertical-align: top;
+}
+main .wrap .design .swiper-container01 .swiper-scrollbar {
+    width: 90%; height: 5px; 
+    position: absolute; /* 스크롤바를 절대 위치로 설정 */
+    left: 50%; /* 수평 가운데 위치 */
+    bottom: 15px; /* 하단 여백 */
+    transform: translateX(-50%); /* 스크롤바 가운데 정렬 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    background-color: rgba(202, 105, 105, 0.15); 
+    bottom: 15px;
+}
+main .wrap .design .swiper-container01 .swiper-scrollbar .swiper-scrollbar-drag {
+    background: #B06161;
 }
