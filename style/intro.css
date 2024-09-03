@@ -1,3 +1,16 @@
+/* 글자 바꾸는 방법
+    h1 {
+    font-weight: 800; font-size: 5rem;
+    background: linear-gradient(to right, aqua, lime, pink, aqua);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: text_bg 5s linear infinite;
+}
+@keyframes text_bg {
+    0% {background-position-x:100% ;}
+    100% {background-position-x: 400%;}
+} */
 html ,body {overflow-x:hidden; width:100%; min-width: 1000px;}
 body{margin: 0; display: flex; justify-content: center; align-items: center;
 height: 100vh; background-color: #F5EEE6;}

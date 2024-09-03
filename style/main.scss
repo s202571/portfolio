@@ -1,0 +1,304 @@
+* {
+    cursor: none; z-index: 1;
+}
+html ,body {overflow-x:hidden; height: 100%;
+    background-color: #F5EEE6; margin: 0;
+}
+.circle {
+    position: fixed; 
+    /* 마우스 가운데로 가게 만들어줌  */
+    transform: translate(-50%, -50%);
+    /* 마우스가 눌리게 만듬(기능 해제로 다른 이벤트 사용가능) */
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease; /* 부드러운 움직임을 위해 트랜지션 추가 */
+    img {
+        width: 30px; height: auto;
+        z-index: 999;
+    }
+}
+main {
+    .wrap {padding-top: 176px; width: 100vw;
+        .about {height: 100%;
+            h2 {
+                margin-top: 30px;
+                color: #776B5D; font-weight: 600; font-size: 4rem; text-align: center;
+            }
+            h3 {
+                text-align: center;
+                font-size: 1.5rem; font-weight: 600;
+                line-height: 1.5;
+                margin-top: 35px;
+            }
+            .about_container {
+                margin: 30px 116px 0;
+                .bg {
+                    background-color:#fff; display: flex; flex-flow: row nowrap;
+                    border-radius: 10px; align-items: center;
+                    padding: 30px 60px; width: 100vw;
+                    .photo {
+                        overflow: hidden; margin-right: 65px;
+                        img {
+                            border-radius: 50%; width: 300px; height: auto; 
+                            object-position:left 20%; 
+                            filter:contrast(85%) brightness(120%) saturate(110%) sepia(10%);
+                        }
+                    }
+                    .about_content {
+                        display: flex; flex-flow: column nowrap; justify-content: flex-start;
+                        > p {
+                            font-size: 1.125rem; font-weight: 600;
+                            margin-bottom: 40px; font-family: "Noto Sans KR", sans-serif;
+                        }
+                        > p:first-of-type {
+                            font-size: 1.5rem; 
+                        }
+                        .box {
+                            margin-top: 10px; display: flex; flex-flow: row nowrap;
+                            .left {
+                                margin-right: 200px;
+                                p {
+                                    font-size: 1.25rem; margin-top: 20px; 
+                                    span {
+                                        font-size: 1.5rem; 
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                            .right {
+                                p {
+                                    font-size: 1.25rem; margin-top: 20px;
+                                    span {
+                                        font-size: 1.5rem; margin-right: 10px;
+                                    }
+                                    a {
+                                        text-decoration: underline; font-size: 1.25rem;
+                                        color: #776B5D; font-weight: 500;
+                                    }
+                                    a:hover {
+                                        color: #E7C6C6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > span {
+                content: ''; display: block;
+                width: 557px; height: 3px; position: relative; top: 0; left: 50%;
+                transform: translateX(-50%);
+                background-color: #776B5D;
+                margin-bottom: 200px;
+            }
+        }
+        .skill {
+            background-color: #B06161; min-height: 100vh; width: 100%;
+            h2 {
+                color: #E7C6C6; font-weight: 600; font-size: 4rem; text-align: center;
+                margin: 0 auto 45px; 
+            }
+            .skill_container {
+                background-color: #fff; margin: 45px 144px;
+                padding: 30px 65px; border-radius: 40px;
+                .skill_photo {
+                    display: flex; flex-flow: row wrap; justify-content: center;
+                    gap: 20px;
+                    button {
+                        img {
+                            width: 75px; height: auto; 
+                        }
+                    }
+                }
+            }
+            .skill_explanation {
+                background-color: #fff; margin: 40px 144px;
+                padding: 30px 65px; border-radius: 40px;
+                position: relative;
+                > p {
+                    position: absolute; top: 50%; left: 0;
+                    text-align: center; width: 100%; align-self: center;
+                    font-size: 1.5rem; font-weight: 600;
+                }
+                .contents_wrap {
+                    display: flex; width: 100%; align-items: center; height: 150px;
+                    .last_skill_photo {
+                        margin-right: 58px; 
+                        img {
+                            width: 150px; height: auto;
+                        }
+                    }
+                    .skill_text {
+                        .box {padding: 0 100px;
+                            .skill_title {
+                                font-size: 3rem; font-weight: 700;
+                            }
+                            .skill_content {
+                                margin-top: 20px; font-size: 1.25rem; font-family: "Noto Sans KR", sans-serif;
+                                font-weight: 500; line-height: 1.5;
+                            }
+                        }
+                    }
+                }
+            }
+            .skill_explanation::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-right: 15px solid #ffffff; /* 배경색과 동일하게 설정합니다. */
+                top: -15px;
+                left: 50%; /* 말풍선의 좌우 여백에 따라 조절합니다. */
+                transform: translateX(-50%);
+            }
+        }
+        .project {
+            margin: 100px 0; position: relative;
+            h1 {
+                color: #776B5D; font-weight: 600; font-size: 4rem; margin-bottom: 15px;
+                margin-left: 30px; 
+            }
+            .swiper-container {
+                position: relative; width: 100%; overflow: hidden;
+                .swiper-wrapper {
+                    display: flex;
+                    /* width: 100%; overflow-x: hidden; */
+                    width: auto; max-width: 100%;
+                    white-space: nowrap; justify-content: space-between;
+                    padding-bottom: 250px; margin-left: 200px;
+                    .swiper-slide {
+                        width: 100%; display: inline-block; margin-right: 300px;
+                        h2 {
+                            font-size: 2rem; font-weight: 700; color: #776B5D;
+                        }
+                        .container {
+                            margin-top: 20px; display: flex; position: relative; 
+                            .photo {
+                                position: relative; overflow: hidden;  margin-right: 30px;
+                                img {
+                                    width: 400px; height: auto;
+                                    z-index: 100; position: relative;
+                                }
+                                .project_link {
+                                    button {
+                                        text-align: left; width: 100px;
+                                        position: absolute; left: 340px;  padding: 5px 15px;
+                                        background-color: #DC8686; border-radius: 5px;
+                                        z-index: 1; color: #fff;
+                                    }
+                                    .result {top: 300px;}
+                                    .plan {top: 340px;}
+                                    .result:hover {
+                                        background-color: #E7C6C6; transform: translateX(70px);
+                                        width: 100px; transition: all 0.3s
+                                    }
+                                    .plan:hover {
+                                        background-color: #E7C6C6; transform: translateX(70px);
+                                        width: 70px; transition: all 0.3s;
+                                    }
+                                }
+                            }
+                            .content {
+                                .text {}
+                                dl {
+                                    margin-top: 20px; margin-right: 15px;
+                                    dt {
+                                        font-size: 2rem;
+                                        white-space: nowrap;
+                                    }
+                                    dd {
+                                        font-size: 1.25rem; 
+                                    }
+                                }
+                                ul {
+                                    margin-top: 10px; position: relative; top: -246px; right: -236px;
+                                    li {
+                                        font-size: 1.25rem; font-weight: 600; color:#B06161;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn {
+                    position: absolute; left: 50%; bottom: 175px;
+                    transform: translateX(-50%); cursor: none;
+                    #pause {
+                        margin-right: 30px; 
+                    }
+                    button {
+                        z-index: 999; cursor: none;
+                    }
+                    button:hover {
+                        color: #B06161;
+                    }
+                }
+                .result_btn {
+                    position: absolute; left: 50%; bottom: -150px;
+                    transform: translateX(-50%); cursor: none;
+                    display: flex; justify-content: center;
+                    width: 100%;
+                    a {
+                        margin:0 10px; font-weight: 500; font-size: 1.125rem;
+                        border-radius: 10px; background-color: #DC8686;
+                        color: #F5EEE6; text-align: center; 
+                        width: 100px; height: 40px; line-height: 40px;
+                        display: inline-block; 
+                    }
+                    a:hover {
+                        background-color: #E7C6C6; color: #B06161;
+                    }
+                }
+                .swiper-button-prev{
+                    color: #776B5D; position: absolute;
+                    top: 50%; left:10%;
+                    transform: translate(-50%, -50%);
+                }
+                .swiper-button-next {
+                    color: #776B5D; position: absolute;
+                    top: 50%; right: 10px;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .design {
+            h2 {
+                color: #776B5D; font-weight: 600; font-size: 4rem; margin-bottom: 15px;
+                margin-left: 30px;
+            }
+            .swiper-container01 {
+                overflow: visible;
+                width: 90%; margin-left: 30px;
+                .project_photo {
+                    width: fit-content;
+                    display: flex; flex-flow: row nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    .swiper-slide {
+                        width: 340px !important;
+                        margin-right: 30px;
+                        cursor: grab;
+                        img {
+                            width: 100%; height: auto; vertical-align: top;
+                        }
+                    }
+                }
+                .swiper-scrollbar {
+                    width: 90%; height: 5px; 
+                    position: absolute; /* 스크롤바를 절대 위치로 설정 */
+                    left: 50%; /* 수평 가운데 위치 */
+                    bottom: 15px; /* 하단 여백 */
+                    transform: translateX(-50%); /* 스크롤바 가운데 정렬 */
+                    border-radius: 5px; /* 모서리 둥글게 */
+                    background-color: rgba(202, 105, 105, 0.15); 
+                    bottom: 15px;
+                    .swiper-scrollbar-drag {
+                        background: #B06161;
+                    }
+                }
+            }
+        }
+    }
+}
