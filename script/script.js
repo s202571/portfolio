@@ -4,18 +4,6 @@ const skill_list = [
         skill_name:'Api',
         skill_text:'지도, 우편번호 등 간단한 것을 연결하여 사용할 수 있으며 채팅 api 구현 가능합니다',
     },{
-        skill_name:'Notion',
-        skill_text:'사용하여 메모, 일정관리 등을 할 수 있습니다.',
-    },{
-        skill_name:'Figma',
-        skill_text:'피그마를 활용하여 와이어프레임 및 프로토타입을 구성 할 수 있습니다.',
-    },{
-        skill_name:'Photoshop',
-        skill_text:'사진 보정, 합성, 상세페이지, SNS 디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.',
-    },{
-        skill_name:'illustrator',
-        skill_text:'간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 벡터 디자인을 제작할 수 있습니다.',
-    },{
         skill_name:'GitHub',
         skill_text:'협업을 위해서 사용 할 수 있으며 안전하게 저장할 수 있습니다',
     },{
@@ -45,6 +33,18 @@ const skill_list = [
     },{
         skill_name:'Php',
         skill_text:'php include 명령어를 이용한 공통 페이지 관리를 할 수 있습니다.',
+    },{
+        skill_name:'Notion',
+        skill_text:'사용하여 메모, 일정관리 등을 할 수 있습니다.',
+    },{
+        skill_name:'Figma',
+        skill_text:'피그마를 활용하여 와이어프레임 및 프로토타입을 구성 할 수 있습니다.',
+    },{
+        skill_name:'Photoshop',
+        skill_text:'사진 보정, 합성, 상세페이지, SNS 디자인 등 다양한 실무 디자인을 창의적으로 제작할 수 있습니다.',
+    },{
+        skill_name:'illustrator',
+        skill_text:'간단한 캐릭터 디자인, 로고 디자인 등 깔끔하고 돋보이는 벡터 디자인을 제작할 수 있습니다.',
     },
 ]
 
