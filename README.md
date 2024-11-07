@@ -38,10 +38,24 @@
 * 10/24 ~ 디자인 변경
 * 디자인 구성 전체적으로 변경
 - home, about, skill - html 완성
-- 11/05 project - html 완성
-1. skill - popup형식으로 디자인 변경함
-project - 사이트, 기획서 버튼
 
-about 프로필사진 배경이랑 어울리는 사진으로 변경함
+11/05 project,about 변경  - html 완성
+11/07 project 디자인 변경 및 design 디자인 구성
+
+변경한 부분
+
+1. skill 
+popup형식으로 디자인 변경함
+
+2. project 
+사이트, 기획서 버튼만
+내용변경 내가만든 사이트 자세히
+
+
+3. about 
+프로필사진 배경이랑 어울리는 사진으로 변경함
+
+4. design 
+이미지 클릭하면 팝업으로 다양한 이미지 볼수있음
 
 js - FullPage, Swiper 사용

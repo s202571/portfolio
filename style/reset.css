@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: mm;
     src: url(../font/KCCDodamdodam\(Windows\).ttf);
-}
+} */
 
 html,body,* {box-sizing:border-box;}
 html,body,h1,h2,h3,h4,h5,h6,
@@ -19,7 +19,7 @@ address,details,mark,time,video,img,summary,iframe,div{
     line-height:1.2; color:#333;
     text-decoration:none;
     letter-spacing:-0.4px;
-    font-family: "mm", sans-serif;
+    /* font-family: "mm", sans-serif; */
     box-sizing: border-box;
 }
 ul,ol,li {list-style:none;}
